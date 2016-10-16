@@ -55,12 +55,7 @@ This project is hand crafted for simplicity. You simply load `public/index.html`
 and BAM! It works. No gulp. No command-line (except for web servers). Promised.
 
 The rule is, if you change anything in `public`, you can always refresh the page
-to see the result. A few exceptions though:
-
-* Do not touch `public/dist`. That folder is only used in distribution.
-* If you wish to change bulma styles, please see the following section. Do not
-  try to change `public/lib/bulma-customized.css` manually or it will be
-  overwritten.
+to see the result.
 
 To customize bulma, you need to change `src/bulma-customized.scss`. Then you run
 `npm run build-bulma` to update the compile result in public. Please submit BOTH
@@ -71,7 +66,9 @@ If you don't have Node.js installed, please ask others to modify that file for
 you. Don't try to change it without compiling it. It won't work that way.
 
 Please feel free to add/remove/modify any files in `public`. You probably don't
-want to modify existing library files in `lib` though.
+want to modify existing library files in `lib` though. All URLs must be relative
+to the `public` folder! For example, write `templateUrl: "partials/foo.html"`
+instead of `public/partials/foo.html`.
 
 Here's the complete tree:
 
@@ -79,14 +76,14 @@ Here's the complete tree:
 project root
   |- public
      |- index.html # Entrance point
-     |- dist # Files used in final distribution. Don't touch.
      |- images
      |- lib # Put any third-party source/dist files here please.
         |- bulma-customized.css # Don't change this manully! See instructions.
      |- partials # Angular HTML template files.
-     |- scripts # Mostly Angular modules and controllers.
+     |- javascript # Mostly Angular modules and controllers.
   |- src
      |- bulma-customized.scss # Customize bulma here. Please compile it!
+  |- dist # Generated static structure for final submission.
   |- package.json # Dev dependencies and build scripts. Nothing special.
   |- README.md # The file you are looking at.
 ```
@@ -114,7 +111,8 @@ have to remember it. The only thing you will ever need is its **name**.
 
 ### Create template file
 
-Then, create the template file you specified. In this case, `fantastic.html`.
+Then, create the template file you specified. In this case,
+`public/partials/fantastic.html`.
 
 ```html
   Hi! I'm the page content which is <strong>Fantastic!</strong>
@@ -138,3 +136,14 @@ Finally, you can link to your new page using the **state name**. Instead of
 It simply works. Please note that you want to use the state name as you defined
 earlier, not the URL. If the tag has a `href` attribute, please remove it
 because it will conflict with `ui-sref` links. You only need `ui-sref`.
+
+Final Submission
+----------------
+
+Before final submission, run `npm run dist` to build a distribution-ready
+package in the `dist` folder. Then you can make a zip file of that folder.
+
+During the process, partial files will be minified and dumped into a JavaScript
+file called `dist/javascript/templates.js`. In this way, the final result is
+runnable on local file system (with no AJAX). The only HTML file remains is the
+`dist/index.html` file, which is the entrance.
