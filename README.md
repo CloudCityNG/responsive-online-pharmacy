@@ -77,13 +77,13 @@ project root
   |- public
      |- index.html # Entrance point
      |- images
-     |- lib # Put any third-party source/dist files here please.
+     |- css
         |- bulma-customized.css # Don't change this manully! See instructions.
      |- partials # Angular HTML template files.
-     |- javascript # Mostly Angular modules and controllers.
+     |- javascript # 3rd party libs, Angular modules and controllers.
   |- src
      |- bulma-customized.scss # Customize bulma here. Please compile it!
-  |- dist # Generated static structure for final submission.
+  |- dist # Generated static structure for final submission. Don't touch!
   |- package.json # Dev dependencies and build scripts. Nothing special.
   |- README.md # The file you are looking at.
 ```
