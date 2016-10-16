@@ -1,0 +1,28 @@
+// - Colors -
+
+$blue: #00466b;
+$green: #006b54;
+$orange: #ff470f;
+$purple: #771b61;
+$red: #863f4b;
+$turquoise: #00d1b2;
+$yellow: #ede9ab;
+$primary: $purple;
+
+// Other variables
+
+$nav-height: 80px;
+
+@import "../node_modules/bulma/bulma.sass";
+
+.nav-item img {
+  max-height: 70px;
+}
+
+.title.is-primary {
+  color: $purple;
+
+  &:before {
+    content: " | ";
+  }
+}

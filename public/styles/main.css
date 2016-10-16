@@ -1,0 +1,18 @@
+/* Nav bar */
+
+.nav-left, .nav-right {
+  flex-basis: initial;
+  flex-grow: 0;
+}
+
+@media screen and (max-width: 1365px) {
+  .st-nav-search-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .st-nav-search-bar .control .input {
+    width: 10em;
+  }
+}

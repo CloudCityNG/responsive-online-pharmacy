@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="succotash" ng-controller="MasterCtrl as master">
+<head>
+  <meta charset="UTF-8">
+  <title>UPMC Online Pharmacy</title>
+  <link rel="stylesheet" href="./lib/bulma-customized.css" media="all">
+  <link rel="stylesheet" href="./styles/main.css" media="all">
+  <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css" media="all">
+</head>
+<body>
+  <header ng-include="'partials/nav.html'"></header>
+  <div class="container is-fluid">
+    <main style="margin-top: 40px;" ui-view>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Copyright (C) 2017 Team Eighth Wonder, ebConsultants.
+        </p>
+        <p>
+          Disclaimer: This is <strong>NOT</strong> a real business. It is only provided for
+          demonstration purposes. No medicine is actually sold.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./lib/angular.js"></script>
+  <script src="./lib/angular-ui-router.js"></script>
+  <script src="./scripts/succotash.js"></script>
+  <script src="./scripts/succotash.states.js"></script>
+  <script src="./dist/templates.js"></script>
+</body>
+</html>
