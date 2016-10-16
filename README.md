@@ -90,3 +90,51 @@ project root
   |- package.json # Dev dependencies and build scripts. Nothing special.
   |- README.md # The file you are looking at.
 ```
+
+How do I add pages?
+-------------------
+
+That's simple! These three easy steps will get you started.
+
+### Create a state definition
+
+Open `public/scripts/succotash.state.js` and add your state there following the
+format. It should be something like this:
+
+```js
+    .state({
+      name: 'fantastic',
+      url: '/fantastic',
+      templateUrl: 'partials/fantastic.html',
+    })
+```
+
+Please note you need to select the URL for your page now. However, you don't
+have to remember it. The only thing you will ever need is its **name**.
+
+### Create template file
+
+Then, create the template file you specified. In this case, `fantastic.html`.
+
+```html
+  Hi! I'm the page content which is <strong>Fantastic!</strong>
+  <hr>
+  Great stuff here...
+```
+
+Note that you only write the part of the view, not the whole content. The page
+source is a HTML page fragment, not a complete HTML. There's no need to put
+`<html>`, `<head>` or `<body>` there. Please do not copy code from other files.
+
+### Link to the page
+
+Finally, you can link to your new page using the **state name**. Instead of
+`href`, you use `ui-sref` (state references).
+
+```html
+  <a ui-sref="awesome">My Awesome Page</a>
+```
+
+It simply works. Please note that you want to use the state name as you defined
+earlier, not the URL. If the tag has a `href` attribute, please remove it
+because it will conflict with `ui-sref` links. You only need `ui-sref`.
