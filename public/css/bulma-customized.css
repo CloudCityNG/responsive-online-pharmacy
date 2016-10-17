@@ -2393,9 +2393,9 @@ a.box:active {
 .nav-toggle {
   cursor: pointer;
   display: block;
-  height: 80px;
+  height: 50px;
   position: relative;
-  width: 80px; }
+  width: 50px; }
   .nav-toggle span {
     background-color: #4a4a4a;
     display: block;
@@ -2528,14 +2528,14 @@ a.nav-item {
   align-items: stretch;
   background-color: white;
   display: flex;
-  min-height: 80px;
+  min-height: 50px;
   position: relative;
   text-align: center;
   z-index: 2; }
   .nav > .container {
     align-items: stretch;
     display: flex;
-    min-height: 80px;
+    min-height: 50px;
     width: 100%; }
     .nav > .container > .nav-left > .nav-item:first-child:not(.is-tab) {
       padding-left: 0; }
