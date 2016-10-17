@@ -22,25 +22,65 @@
       </span>
       <span>1-800-UPMCPHA</span>
     </span>
-    <span class="nav-item">
+    <span class="nav-item" ng-if="!master.user">
       <a class="button" ui-sref="underConstruction">
         <span>Register</span>
       </a>
-      <a class="button is-primary" href="#">
+      <button class="button is-primary" ng-click="master.showLoginModal();">
         <span class="icon">
           <i class="fa fa-user"></i>
         </span>
         <span>Login</span>
-      </a>
+      </button>
+    </span>
+    <span class="nav-item" ng-if="master.user">
+      <button class="button is-primary st-has-dropdown"
+        ng-click="master.showUserMenu = !master.showUserMenu;"
+        ng-class="{'is-active': master.showUserMenu}">
+        <span class="icon">
+          <i class="fa fa-user"></i>
+        </span>
+        <span>John Doe</span>
+        <span class="icon">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <span class="st-dropdown box">
+          <a class="panel-block" ui-sref="underConstruction">
+            <span class="panel-icon">
+              <i class="fa fa-info"></i>
+            </span>
+            Account Info
+          </a>
+          <a class="panel-block" ui-sref="underConstruction">
+            <span class="panel-icon">
+              <i class="fa fa-truck"></i>
+            </span>
+            Track My Order
+          </a>
+          <a class="panel-block" ui-sref="underConstruction">
+            <span class="panel-icon">
+              <i class="fa fa-list"></i>
+            </span>
+            Order History
+          </a>
+          <a class="panel-block" href="#"
+            ng-click="$event.preventDefault(); master.logout();">
+            <span class="panel-icon">
+              <i class="fa fa-sign-out"></i>
+            </span>
+            Log Out
+          </a>
+        </span>
+      </button>
     </span>
   </div>
 </nav>
 <nav class="nav has-shadow st-secondary-nav">
   <div class="nav-left">
-    <a class="nav-item is-tab is-active">Home</a>
-    <a class="nav-item is-tab">Product</a>
-    <a class="nav-item is-tab">FAQ</a>
-    <a class="nav-item is-tab">Contact Us</a>
+    <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="home">Home</a>
+    <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="product">Product</a>
+    <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="faq">FAQ</a>
+    <a class="nav-item is-tab" ui-sref="underConstruction">Contact Us</a>
   </div>
   <div class="nav-right">
     <div class="nav-item">
