@@ -5,14 +5,21 @@
     var master = this;
     master.$state = $state;
     master.showLoginModal = showLoginModal;
+    master.showRegisterModal = showRegisterModal;
     master.login = login;
     master.logout = logout;
+    master.register = register;
 
     init();
 
     function showLoginModal() {
       master.loginDetails = {};
       master.loginModalShown = true;
+    }
+
+    function showRegisterModal() {
+      master.registerDetails = {};
+      master.registerModalShown = true;
     }
 
     function login(loginDetails) {
@@ -26,6 +33,12 @@
       delete localStorage['upmcSession'];
       master.loginModalShown = false;
       master.showUserMenu = false;
+    }
+
+    function register(registerDetails) {
+      master.user = registerDetails;
+      localStorage['upmcSession'] = JSON.stringify(master.user);
+      master.registerModalShown = false;
     }
 
     function init() {

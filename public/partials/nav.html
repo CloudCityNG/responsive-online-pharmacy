@@ -23,9 +23,9 @@
       <span>1-800-UPMCPHA</span>
     </span>
     <span class="nav-item" ng-if="!master.user">
-      <a class="button" ui-sref="underConstruction">
+      <button class="button" ng-click="master.showRegisterModal();">
         <span>Register</span>
-      </a>
+      </button>
       <button class="button is-primary" ng-click="master.showLoginModal();">
         <span class="icon">
           <i class="fa fa-user"></i>
