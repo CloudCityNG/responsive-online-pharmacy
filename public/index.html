@@ -10,22 +10,9 @@
 <body>
   <header ng-include="'partials/nav.html'"></header>
   <div class="container is-fluid">
-    <main style="margin-top: 40px;" ui-view>
-    </main>
+    <main style="margin-top: 40px;" ui-view></main>
   </div>
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Copyright (C) 2017 Team Eighth Wonder, ebConsultants.
-        </p>
-        <p>
-          Disclaimer: This is <strong>NOT</strong> a real business. It is only provided for
-          demonstration purposes. No medicine is actually sold.
-        </p>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" ng-include="'partials/footer.html'"></footer>
   <div ng-include="'partials/login-modal.html'"></div>
   <div ng-include="'partials/registration-modal.html'"></div>
 
