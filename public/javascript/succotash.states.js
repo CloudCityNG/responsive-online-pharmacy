@@ -19,6 +19,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'productLineNutri',
       url: '/productline-nutri',
       templateUrl: 'partials/productline-nutri.html',
+    })
+    .state({
+      name: 'productLineVita',
+      url: '/productline-vita',
+      templateUrl: 'partials/productline-vita.html',
     });
   $urlRouterProvider.otherwise('/');
 });
