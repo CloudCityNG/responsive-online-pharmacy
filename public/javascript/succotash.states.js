@@ -14,6 +14,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'underConstruction',
       url: '/under-construction',
       templateUrl: 'partials/under-construction.html',
+    })
+    .state({
+      name: 'cartSummary',
+      url: '/cart-summary',
+      templateUrl: 'partials/cart.html',
     });
   $urlRouterProvider.otherwise('/');
 });
