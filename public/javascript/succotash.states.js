@@ -16,14 +16,9 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/under-construction.html',
     })
     .state({
-      name: 'productLineNutri',
-      url: '/productline-nutri',
-      templateUrl: 'partials/productline-nutri.html',
-    })
-    .state({
-      name: 'productLineVita',
-      url: '/productline-vita',
-      templateUrl: 'partials/productline-vita.html',
+      name: 'cartSummary',
+      url: '/cart-summary',
+      templateUrl: 'partials/cart.html',
     });
   $urlRouterProvider.otherwise('/');
 });
