@@ -29,6 +29,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'cartSummary',
       url: '/cart-summary',
       templateUrl: 'partials/cart.html',
+    })
+    .state({
+      name: 'checkout',
+      url: '/checkout',
+      templateUrl: 'partials/checkout.html',
     });
   $urlRouterProvider.otherwise('/');
 });
