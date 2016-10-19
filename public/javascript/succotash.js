@@ -9,7 +9,7 @@
     });
   });
 
-  app.controller('MasterCtrl', function($state) {
+  app.controller('MasterCtrl', function($state, $rootScope) {
     var master = this;
     master.$state = $state;
     master.showLoginModal = showLoginModal;
@@ -17,6 +17,7 @@
     master.login = login;
     master.logout = logout;
     master.register = register;
+    master.toggleProductTabs = toggleProductTabs;
 
     init();
 
@@ -49,6 +50,14 @@
       master.registerModalShown = false;
     }
 
+    function toggleProductTabs() {
+      if (master.isProductPage) {
+        // Disable toggling on product related pages (always shown).
+        return;
+      }
+      master.productTabsShown = !master.productTabsShown;
+    }
+
     function init() {
       var loginDetails = null;
       try {
@@ -57,6 +66,16 @@
       if (loginDetails) {
         login(loginDetails);
       }
+
+      $rootScope.$on('$stateChangeSuccess', function(_, toState) {
+        if (toState.name.indexOf('product') >= 0) {
+          master.isProductPage = true;
+          master.productTabsShown = true;
+        } else {
+          master.isProductPage = false;
+          master.productTabsShown = false;
+        }
+      });
     }
   });
 })();

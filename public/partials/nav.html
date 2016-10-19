@@ -78,7 +78,13 @@
 <nav class="nav has-shadow st-secondary-nav">
   <div class="nav-left">
     <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="home">Home</a>
-    <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="productLineNutri">Product</a>
+    <a class="nav-item is-tab" ng-click="master.toggleProductTabs()"
+      ng-class="{'is-active': master.isProductPage}">
+      <span>Product</span>
+      <span class="icon">
+        <i class="fa fa-angle-down" style="float: right;"></i>
+      </span>
+    </a>
     <a class="nav-item is-tab" ui-sref-active="is-active" ui-sref="faq">FAQ</a>
     <a class="nav-item is-tab" ui-sref="underConstruction">Contact Us</a>
   </div>
@@ -102,3 +108,18 @@
     </div>
   </div>
 </nav>
+<div class="tabs st-product-tabs" style="background-color: #f0f0f0"
+  ng-class="{'st-expanded': master.productTabsShown || master.isProductPage}">
+  <ul style="padding: 0 20px;">
+    <li ng-class="{'is-active': master.$state.$current.name.indexOf('productLine') === 0}">
+      <a ui-sref="productLineNutri">Nutrition</a>
+    </li>
+    <li><a ui-sref="underConstruction">Cold &amp; Flu</a></li>
+    <li><a ui-sref="underConstruction">Painkillers</a></li>
+    <li><a ui-sref="underConstruction">Diet &amp; Fitness</a></li>
+    <li><a ui-sref="underConstruction">Personal Care</a></li>
+    <li><a ui-sref="underConstruction">Antiseptic</a></li>
+    <li><a ui-sref="underConstruction">Skin Care</a></li>
+    <li><a ui-sref="underConstruction">Anticancer</a></li>
+  </ul>
+</div>

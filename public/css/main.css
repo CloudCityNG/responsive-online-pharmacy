@@ -14,6 +14,20 @@
   padding-left: 20px;
 }
 
+.nav-item.st-expanded {
+  color: #363636;
+  background-color: #f0f0f0;
+}
+
+.st-product-tabs {
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.st-product-tabs.st-expanded {
+  height: 38px;
+}
+
 /* Dropdown menu */
 
 .st-has-dropdown {
