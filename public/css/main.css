@@ -37,3 +37,17 @@
   .st-has-dropdown.is-active .st-dropdown {
     display: block;
   }
+
+/* Footer */
+
+footer {
+  position: relative;
+}
+
+  .st-stamp {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 80%;
+    width: auto;
+  }
