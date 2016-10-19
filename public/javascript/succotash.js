@@ -1,6 +1,14 @@
 (function() {
   var app = angular.module('succotash', ['ui.router']);
 
+  app.config(function ($provide) {
+    $provide.decorator('$uiViewScroll', function ($window) {
+      return function (uiViewElement) {
+        document.body.scrollTop = 0;
+      }; 
+    });
+  });
+
   app.controller('MasterCtrl', function($state) {
     var master = this;
     master.$state = $state;
