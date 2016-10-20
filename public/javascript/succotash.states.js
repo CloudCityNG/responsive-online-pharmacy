@@ -34,6 +34,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'checkout',
       url: '/checkout',
       templateUrl: 'partials/checkout.html',
+    })
+    .state({
+      name: 'orderConfirmation',
+      url: '/orderConfirmation',
+      templateUrl: 'partials/orderConfirmation.html',
     });
   $urlRouterProvider.otherwise('/');
 });
