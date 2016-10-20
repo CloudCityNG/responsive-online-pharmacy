@@ -99,11 +99,14 @@
 							</p>
 
 							<p class="control">
-								<label class="checkbox">
-									<input type="checkbox">
-									Receive text updates about shipment
+								<label class="radio">
+									<input type="radio" name="question">
+									Standard delivery
 								</label>
-							</p>
+								<label class="radio">
+									<input type="radio" name="question">
+									Express delivery
+								</label> </p>
 
 						</div>
 
@@ -121,7 +124,7 @@
 
 							<div class="column is-7">
 									<div><label class="label">Card payment</label></div>
-										<img src="images/Payment.jpg" alt="Payment options" class="image is-30x100">
+										<img src="images/instant-payment.png" alt="Payment options" class="image is-30x100">
 								<button class="button is-outlined  is-medium fa fa-credit-card"> Credit card</button>
 								<button class="button is-outlined is-medium fa fa-credit-card-alt"> Debit card</button>
 							</div>
@@ -179,6 +182,12 @@
 									</div>
 								</div>
 
+								<p class="control">
+										<label class="checkbox">
+											<input type="checkbox">
+											Save details of the card for future transactions
+										</label>
+
 								<div class="columns">
 									<div class="column is-half">
 										<label class="label">UPMC e-Coupon</label>
@@ -199,21 +208,7 @@
 										</div>
 									</div>
 
-									<p class="control">
-											<label class="checkbox">
-												<input type="checkbox">
-												Save details of the card for future transactions
-											</label>
 
-												<p class="control">
-													<label class="radio">
-														<input type="radio" name="question">
-														Standard delivery
-													</label>
-													<label class="radio">
-														<input type="radio" name="question">
-														Express delivery
-													</label> </p>
 
 
 
@@ -275,11 +270,6 @@
 												<p><b> $55.00 </b></p>
 											</div>
 										</div>
-
-
-
-
-
 											<p class="control">
 											 <button class="button is-primary" ui-sref="orderConfirmation">Pay and place order</button>
 											 <button class="button is-link" ui-sref="cartSummary">Cancel</button>
@@ -287,9 +277,8 @@
 										 <br>
 										 <a ui-sref="underConstruction" style="float:right"><span class="help"> >Shipping and Returns Policies</span></a>
 															<div>
-																<img src="images/SecuredPayment.png" alt="Secured payment" class="image">
+																<img src="images/SecurePayment.png" alt="Secured payment" class="image">
 															</div>
-											
 									 </div>
 									</div>
 								</div>
