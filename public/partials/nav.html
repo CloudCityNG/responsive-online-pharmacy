@@ -90,7 +90,7 @@
   </div>
   <div class="nav-right">
     <div class="nav-item">
-      <form ng-submit="master.$state.go('searchResult', {term: master.searchTerm})">
+      <form ng-submit="master.searchTerm && master.$state.go('searchResult', {term: master.searchTerm})">
         <div class="control has-addons has-icon">
           <input class="input" type="text" placeholder="Find a product" ng-model="master.searchTerm">
           <i class="fa fa-search"></i>
