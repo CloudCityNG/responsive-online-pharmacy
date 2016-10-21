@@ -37,6 +37,7 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
     })
     .state({
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'searchResultVita',
       url: '/searchresult-vita',
       templateUrl: 'partials/searchresult-vita.html',
@@ -45,6 +46,16 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       url: '/orderConfirmation',
       templateUrl: 'partials/orderConfirmation.html',
 >>>>>>> refs/remotes/origin/order-confirmation
+=======
+      name: 'searchResultVita',
+      url: '/searchresult-vita',
+      templateUrl: 'partials/searchresult-vita.html',
+    })
+    .state({
+      name: 'orderConfirmation',
+      url: '/orderConfirmation',
+      templateUrl: 'partials/orderConfirmation.html',
+>>>>>>> origin/master
     });
   $urlRouterProvider.otherwise('/');
 });
