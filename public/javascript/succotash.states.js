@@ -6,11 +6,6 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/home.html',
     })
     .state({
-      name: 'faq',
-      url: '/faq',
-      templateUrl: 'partials/faq.html',
-    })
-    .state({
       name: 'underConstruction',
       url: '/under-construction',
       templateUrl: 'partials/under-construction.html',
@@ -26,6 +21,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/productline-vita.html',
     })
     .state({
+      name: 'productDetail',
+      url: '/product-detail',
+      templateUrl: 'partials/product-detail.html',
+    })
+    .state({
       name: 'cartSummary',
       url: '/cart-summary',
       templateUrl: 'partials/cart.html',
@@ -36,9 +36,26 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/checkout.html',
     })
     .state({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      name: 'searchResultVita',
+      url: '/searchresult-vita',
+      templateUrl: 'partials/searchresult-vita.html',
+=======
       name: 'orderConfirmation',
       url: '/orderConfirmation',
       templateUrl: 'partials/orderConfirmation.html',
+>>>>>>> refs/remotes/origin/order-confirmation
+=======
+      name: 'searchResultVita',
+      url: '/searchresult-vita',
+      templateUrl: 'partials/searchresult-vita.html',
+    })
+    .state({
+      name: 'orderConfirmation',
+      url: '/orderConfirmation',
+      templateUrl: 'partials/orderConfirmation.html',
+>>>>>>> origin/master
     });
   $urlRouterProvider.otherwise('/');
 });
