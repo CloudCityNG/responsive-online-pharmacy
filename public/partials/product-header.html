@@ -20,28 +20,28 @@
     <p class="level-item">
       <button class="button is-medium is-info is-outlined st-has-dropdown"
         ng-click="showSortMenu = !showSortMenu;"
-        ng-class="{'is-active': showSortMenu}">
-        <span>Relevence</span>
+        ng-class="{'is-active': showSortMenu}" ng-init="selectedSort = 'Relevence'">
+        <span>{{selectedSort}}</span>
         <span class="icon">
           <i class="fa fa-sort-desc"></i>
         </span>
         <span class="st-dropdown box">
-          <a class="panel-block">
-            Revelence
+          <a class="panel-block" ng-click="selectedSort = 'Relevence'">
+            Relevence
           </a>
-          <a class="panel-block">
+          <a class="panel-block" ng-click="selectedSort = 'Price: Low to high'">
             Price: Low to high
           </a>
-          <a class="panel-block">
+          <a class="panel-block" ng-click="selectedSort = 'Price: High to low'">
             Price: High to low
           </a>
-          <a class="panel-block">
+          <a class="panel-block" ng-click="selectedSort = 'Top Rated'">
             Top Rated
           </a>
-          <a class="panel-block">
+          <a class="panel-block" ng-click="selectedSort = 'Most Popular'">
             Most Popular
           </a>
-          <a class="panel-block">
+          <a class="panel-block" ng-click="selectedSort = 'Alphabetically'">
             Alphabetically
           </a>
         </span>

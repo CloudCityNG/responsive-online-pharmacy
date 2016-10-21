@@ -6,11 +6,6 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/home.html',
     })
     .state({
-      name: 'faq',
-      url: '/faq',
-      templateUrl: 'partials/faq.html',
-    })
-    .state({
       name: 'underConstruction',
       url: '/under-construction',
       templateUrl: 'partials/under-construction.html',

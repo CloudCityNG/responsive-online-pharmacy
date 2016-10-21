@@ -1,6 +1,8 @@
 .pdtl-productName {
 	color: #363636; 
 	font-size: 16px;
+	display: block;
+	width: 75%;
 }
 
 .pdtl-productPrice {
@@ -11,4 +13,8 @@
 .pdtl-productReview {
 	color: #00466b; 
 	font-size: 18px;
+}
+
+.pdtl-wrapper > .tile > .tile {
+  padding: 20px 10px;
 }
