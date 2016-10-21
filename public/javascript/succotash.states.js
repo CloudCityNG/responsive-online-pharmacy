@@ -21,6 +21,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/productline-vita.html',
     })
     .state({
+      name: 'productDetail',
+      url: '/product-detail',
+      templateUrl: 'partials/product-detail.html',
+    })
+    .state({
       name: 'cartSummary',
       url: '/cart-summary',
       templateUrl: 'partials/cart.html',
@@ -34,6 +39,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'searchResultVita',
       url: '/searchresult-vita',
       templateUrl: 'partials/searchresult-vita.html',
+    })
+    .state({
+      name: 'orderConfirmation',
+      url: '/orderConfirmation',
+      templateUrl: 'partials/orderConfirmation.html',
     });
   $urlRouterProvider.otherwise('/');
 });
