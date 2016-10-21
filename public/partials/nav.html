@@ -90,13 +90,19 @@
   </div>
   <div class="nav-right">
     <div class="nav-item">
-      <div class="control has-addons has-icon">
-        <input class="input" type="text" placeholder="Find a product">
-        <i class="fa fa-search"></i>
-        <a class="button is-primary" ui-sref="searchResultVita">
-          Search
-        </a>
-      </div>
+      <form ng-submit="master.searchTerm && master.$state.go('searchResult', {term: master.searchTerm})">
+        <div class="control has-addons has-icon">
+          <input list="searchTerms" class="input" type="text" placeholder="Find a product" ng-model="master.searchTerm">
+          <datalist id="searchTerms">
+            <option value="nutrition">
+            <option value="vitamin">
+          </datalist>
+          <i class="fa fa-search"></i>
+          <button class="button is-primary">
+            Search
+          </button>
+        </div>
+      </form>
     </div>
     <div class="nav-item">
       <a class="button is-primary" ui-sref="cartSummary">
