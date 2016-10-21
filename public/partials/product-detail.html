@@ -73,47 +73,47 @@
 </div>      
 </div>
 
-<div class="tabs is-centered is-boxed">
+<div class="tabs is-centered is-boxed" style="margin: 0;" ng-init="activeTab = 'Details'">
   <ul>
-    <li class="is-active">
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Details'}">
+      <a ng-click="activeTab = 'Details'">
         <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
         <span>Details</span>
       </a>
     </li>
-    <li>
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Reviews'}">
+      <a ng-click="activeTab = 'Reviews'">
         <span class="icon is-small"><i class="fa fa-comment"></i></span>
         <span>Reviews</span>   
       </a>
     </li>
-    <li>
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Ingredients'}">
+      <a ng-click="activeTab = 'Ingredients'">
         <span class="icon is-small"><i class="fa fa-list"></i></span>
         <span>Ingredients</span>
       </a>
     </li>
-    <li>
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Directions'}">
+      <a ng-click="activeTab = 'Directions'">
         <span class="icon is-small"><i class="fa fa-user-md"></i></span>
         <span>Directions</span>
       </a>
     </li>
-    <li>
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Images'}">
+      <a ng-click="activeTab = 'Images'">
         <span class="icon is-small"><i class="fa fa-image"></i></span>
         <span>Images</span>
       </a>
     </li>
-    <li>
-      <a>
+    <li ng-class="{'is-active': activeTab === 'Safety'}">
+      <a ng-click="activeTab = 'Safety'">
         <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
         <span>Safety</span>
       </a>
     </li>
   </ul>
 </div>
-<div class = "message-body">
+<div class = "message-body" ng-show="activeTab == 'Details'">
   <div class = "content">
     <p>
       Along with other B vitamins, vitamin B6, also called pyridoxine, supports cellular energy production. Vitamin B6 is also essential in the formation of red blood cells, which play a key role in transporting oxygen throughout the body. A vitamin B6 supplement may help you meet your daily B6 needs.</p>
@@ -135,51 +135,7 @@
       </ul>
     </div>
   </div>
-  <br>
-
-
-
-  <div class="tabs is-centered is-boxed">
-    <ul>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
-          <span>Details</span>
-        </a>
-      </li>
-      <li class = "is-active">
-        <a>
-          <span class="icon is-small"><i class="fa fa-comment"></i></span>
-          <span>Reviews</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-list"></i></span>
-          <span>Ingredients</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-user-md"></i></span>
-          <span>Directions</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-image"></i></span>
-          <span>Images</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
-          <span>Safety</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class = "message-body"> 
+  <div class = "message-body" ng-show="activeTab == 'Reviews'"> 
     <p style = "text-align: center;">
       <span style="float: left;">
         Reviews <strong>21 to 25</strong> of 47
@@ -368,53 +324,7 @@
       </ul>
     </nav>
   </div>
-
-
-  <br>
-
-
-
-  <div class="tabs is-centered is-boxed">
-    <ul>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
-          <span>Details</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-comment"></i></span>
-          <span>Reviews</span>
-        </a>
-      </li>
-      <li class = "is-active">
-        <a>
-          <span class="icon is-small"><i class="fa fa-list"></i></span>
-          <span>Ingredients</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-user-md"></i></span>
-          <span>Directions</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-image"></i></span>
-          <span>Images</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
-          <span>Safety</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class = "message-body"> 
+  <div class = "message-body" ng-show="activeTab == 'Ingredients'"> 
 
     <h1> <STRONG><font size= "5">Supplement Facts(per tablet)</font></STRONG></h1>
 
@@ -463,154 +373,22 @@
 
 
   </div>
-  <br>
-
-
-  <div class="tabs is-centered is-boxed">
-    <ul>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
-          <span>Details</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-comment"></i></span>
-          <span>Reviews</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-list"></i></span>
-          <span>Ingredients</span>
-        </a>
-      </li>
-      <li class = "is-active">
-        <a>
-          <span class="icon is-small"><i class="fa fa-user-md"></i></span>
-          <span>Directions</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-image"></i></span>
-          <span>Images</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
-          <span>Safety</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class = "message-body"> 
+  <div class = "message-body" ng-show="activeTab == 'Directions'"> 
     Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
 
   </div>
-  <br>
-
-
-  <div class="tabs is-centered is-boxed">
-    <ul>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
-          <span>Details</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-comment"></i></span>
-          <span>Reviews</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-list"></i></span>
-          <span>Ingredients</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-user-md"></i></span>
-          <span>Directions</span>
-        </a>
-      </li>
-      <li class = "is-active">
-        <a>
-          <span class="icon is-small"><i class="fa fa-image"></i></span>
-          <span>Images</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
-          <span>Safety</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class = "message-body"> 
-    <div class = "columns">
-      <div class = "column'">
-       <img class ="image1" src="./images/1.png" alt = "Vitamin B6"></div>
-       <div class = "column'">
-         <img class = "image1" src="./images/2.png" alt="Vitamin B6"></div>
+  <div class = "message-body" ng-show="activeTab == 'Images'"> 
+    <div class = "columns" style="justify-content: center">
+      <div class = "column is-narrow" style="width: 20%;">
+       <img src="./images/1.png" alt = "Vitamin B6" style="width: 100%"></div>
+       <div class = "column is-narrow" style="width: 20%;">
+         <img src="./images/2.png" alt="Vitamin B6" style="width: 100%"></div>
 
          <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
          <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
        </div>
      </div>
-     <br>
 
-
-     <div class="tabs is-centered is-boxed">
-      <ul>
-        <li>
-          <a>
-            <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
-            <span>Details</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i class="fa fa-comment"></i></span>
-            <span>Reviews</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i class="fa fa-list"></i></span>
-            <span>Ingredients</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i class="fa fa-user-md"></i></span>
-            <span>Directions</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
-            <span>Images</span>
-          </a>
-        </li>
-        <li class = "is-active">
-          <a>
-            <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
-            <span>Safety</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class = "message-body">
+    <div class = "message-body" ng-show="activeTab == 'Safety'">
       Vitamin B6 should be avoided when taking: Consult a physician before use if you are taking any prescription medications, including anticonvulsants. Vitamin B6 should be used with caution when combined with: Anticonvulsant medications (i.e. phenobarbital, phenytoin). Given that no two people are alike, if you are taking any medications you should be aware that potential drug-nutrient interactions may occur and are encouraged to consult a health care professional before using this product. Combining certain prescription drugs and dietary supplements can lead to undesirable effects such as: Diminished drug effectiveness, reduced supplement effectiveness, impaired drug and/or supplement absorption.
     </div>
-    <br>
-
-
-    <p class="is-1">Please <a href="javascript:history.go(-1);">return to the previous page</a> and try other links.</p>
