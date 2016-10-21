@@ -1,4 +1,8 @@
-<span class="title is-primary">Search Results for <strong>"Vitamins"</strong></span>
+<div class="notification is-warning" ng-if="vm.term != vm.keyword">
+  <button class="delete"></button>
+  Did you mean <b><a ui-sref="searchResult({term: vm.keyword})">{{vm.keyword}}</a></b>?
+</div>
+<span class="title is-primary">Search Results for <strong>"{{vm.term}}"</strong></span>
 <br>
 <br>
 <br>
