@@ -34,6 +34,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       name: 'checkout',
       url: '/checkout',
       templateUrl: 'partials/checkout.html',
+    })
+    .state({
+      name: 'searchResultVita',
+      url: '/searchresult-vita',
+      templateUrl: 'partials/searchresult-vita.html',
     });
   $urlRouterProvider.otherwise('/');
 });
