@@ -22,8 +22,14 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
     })
     .state({
       name: 'productDetail',
-      url: '/product-detail',
+      url: '/products/:id',
+      params: {
+        id: {value: '1'},
+      },
       templateUrl: 'partials/product-detail.html',
+      controller: function($scope, $stateParams) {
+        $scope.productId = parseInt($stateParams.id) || 1;
+      },
     })
     .state({
       name: 'cartSummary',

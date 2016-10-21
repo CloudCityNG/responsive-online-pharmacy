@@ -1,4 +1,3 @@
-<div ng-init="productId = 2"></div>
 <h1 class="title" ng-if="productId != 2">Nature Made vitamin B6 100mg </h1>
 <h1 class="title" ng-if="productId == 2">Nature Made vitamin E 400 I.U. </h1>
 <p class="subtitle">Detailed infomation of medicine is provided blow.</p>
@@ -37,7 +36,7 @@
     <div class="column " style="align-self: center;">
 
       <h6 style="display: inline-block; vertical-align: middle; margin-right: 1.5em;"><strong>Qty<span class="text-muted"> x</span></strong></h6>
-      <input type="number" class="input" value="1" style="width: 7em; vertical-align: middle;">
+      <input type="number" class="input" value="1" min="1" style="width: 7em; vertical-align: middle;">
       <a class="button is-primary" ui-sref="cartSummary">
        <span>+ Add to Cart</span>
        <span class="icon">
@@ -51,7 +50,7 @@
      
       <font size = "3" >Ship information </font> 
       <div style = "float: right;">
-      Check Stock Details >
+     <a ui-sref="underConstruction" style="color: #ffffff"> Check Stock Details >></a>
       </div>
     </div>
     <div class="message-body">
@@ -65,7 +64,7 @@
   <div class="message-header">
     <font size = "3" >Schedule a recurring delivery</font> 
       <div style = "float: right;">
-       Learn More >
+       <a ui-sref="underConstruction" style="color: #ffffff"> Learn More >></a>
       </div>
     
   </div>
@@ -481,7 +480,7 @@
 
     </div>
 
-
+<br>
 
     <nav class="pagination">
       <a class="button">Previous</a>
