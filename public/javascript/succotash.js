@@ -94,7 +94,7 @@
 
       master.cart = {};
       try {
-        master.cart = JSON.parse(localStorage['upmcCart'] || 'null');
+        master.cart = JSON.parse(localStorage['upmcCart'] || 'bam');
       } catch (_) {}
       updateCart();
 
