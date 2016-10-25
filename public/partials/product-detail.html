@@ -36,8 +36,10 @@
     <div class="column " style="align-self: center;">
 
       <h6 style="display: inline-block; vertical-align: middle; margin-right: 1.5em;"><strong>Qty<span class="text-muted"> x</span></strong></h6>
-      <input type="number" class="input" value="1" min="1" style="width: 7em; vertical-align: middle;">
-      <a class="button is-primary" ui-sref="cartSummary">
+      <input type="number" class="input" value="1" min="1"
+        style="width: 7em; vertical-align: middle;"
+        ng-model="addCount" ng-init="addCount = 1">
+      <a class="button is-primary" ng-click="master.addToCart({productId: 2}, addCount)">
        <span>+ Add to Cart</span>
        <span class="icon">
          <i class="fa fa-shopping-cart"></i>

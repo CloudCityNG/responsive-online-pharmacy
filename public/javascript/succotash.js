@@ -9,7 +9,7 @@
     });
   });
 
-  app.controller('MasterCtrl', function($state, $rootScope) {
+  app.controller('MasterCtrl', function($state, $scope, $rootScope) {
     var master = this;
     master.$state = $state;
     master.showLoginModal = showLoginModal;
@@ -18,6 +18,8 @@
     master.logout = logout;
     master.register = register;
     master.toggleProductTabs = toggleProductTabs;
+    master.addToCart = addToCart;
+    master.removeItemFromCart = removeItemFromCart;
 
     init();
 
@@ -58,7 +60,30 @@
       master.productTabsShown = !master.productTabsShown;
     }
 
+    function addToCart(product, opt_count) {
+      opt_count = opt_count || 1;
+      if (!master.cart[product.productId]) {
+        master.cart[product.productId] = opt_count;
+      } else {
+        master.cart[product.productId] += opt_count;
+      }
+      $state.go('cartSummary');
+    }
+
+    function removeItemFromCart(product) {
+      delete master.cart[product.productId];
+    }
+
+    function updateCart() {
+      master.cartCount = (master.cart[1] || 0) + (master.cart[2] || 0);
+      master.totalPrice =
+        (master.cart[1] || 0) * 5.15 + (master.cart[2] || 0) * 8.99;
+      localStorage['upmcCart'] = JSON.stringify(master.cart);
+    }
+
     function init() {
+      master.cartCount = 0;
+      master.totalPrice = 0;
       var loginDetails = null;
       try {
         loginDetails = JSON.parse(localStorage['upmcSession'] || 'null');
@@ -66,6 +91,16 @@
       if (loginDetails) {
         login(loginDetails);
       }
+
+      master.cart = {};
+      try {
+        master.cart = JSON.parse(localStorage['upmcCart'] || 'null');
+      } catch (_) {}
+      updateCart();
+
+      $scope.$watch('master.cart', function() {
+        updateCart();
+      }, true);
 
       $rootScope.$on('$stateChangeSuccess', function(_, toState) {
         if (toState.name.indexOf('product') >= 0) {
