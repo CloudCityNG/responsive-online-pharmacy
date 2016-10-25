@@ -21,6 +21,11 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/productline-vita.html',
     })
     .state({
+      name: 'productLineMultivita',
+      url: '/productline-multivita',
+      templateUrl: 'partials/productline-multivita.html',
+    })
+    .state({
       name: 'productDetail',
       url: '/products/:id/:ma',
       params: {
