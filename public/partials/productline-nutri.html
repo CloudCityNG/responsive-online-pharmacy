@@ -1,3 +1,4 @@
+<a class="title is-5 is-primary" ui-sref="home">Home</a>
 <span class="title is-primary">Nutrition</span>
 <br>
 <br>
@@ -24,12 +25,11 @@
     </aside>
   </div>
   <div class="column is-10">
-    <div class="notification is-primary">
-      <button class="delete"></button>
-      <span class="title is-1"><strong>30% OFF </strong></span>
-      <a class="title is-2" ui-sref="underConstruction">Selected Brand.</a>
+    <div style="background-image: url(images/nutrition.jpg); background-position-y: 65%;">
+      <div class="notification is-primary has-text-right" style="background-image: linear-gradient(to left, rgba(119, 27, 97, 1), rgba(119, 27, 97, 0.3)); background-color: transparent;">
+        <span class="title is-1"><strong>30% OFF</strong> <a ui-sref="underConstruction" class="title is-2">Selected Brands.</a></span>
+      </div>
     </div>
-    <img src="images/nutrition.jpg" style="width: 100%;">
     <br>
     <br>
     <div ng-include="'partials/product-header.html'"></div>

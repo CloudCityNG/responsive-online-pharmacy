@@ -5,6 +5,11 @@
 	width: 75%;
 }
 
+.pdtl-productPrice-old {
+	color: #000000; 
+	font-size: 16px;
+}
+
 .pdtl-productPrice {
 	color: #863f4b; 
 	font-size: 20px;
@@ -18,3 +23,18 @@
 .pdtl-wrapper > .tile > .tile {
   padding: 20px 10px;
 }
+.pdtl-promotion-hero {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 0;
+}
+
+  .pdtl-promotion-hero .notification {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    font-size: initial;
+    font-size: 1rem;
+    width: 100%;
+  }
