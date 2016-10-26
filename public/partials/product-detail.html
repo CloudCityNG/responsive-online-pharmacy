@@ -6,11 +6,39 @@
 
 <div class="columns">
   <div class="column">    
-  <div ng-if="productId!=2">
-    <img src="./images/Vitamin B6.jpg" alt = "Vitamin B6">
+    <div ng-if="productId!=2" ng-init="picId = 1">
+      <div class="product-image" ng-if="picId == 1" style="background-image: url(images/VitaminB6.jpg)">
+      </div>
+      <div class="product-image" ng-if="picId == 2" style="background-image: url(images/1.png)">
+      </div>
+      <div class="product-image" ng-if="picId == 3" style="background-image: url(images/2.png)">
+      </div>
+      <br>
+      <div>
+        <a class="product-image-small" ng-click="picId = 1" ng-class="{'is-active': picId == 1}" style="background-image: url(images/VitaminB6.jpg)">
+        </a>
+        <a class="product-image-small" ng-click="picId = 2" ng-class="{'is-active': picId == 2}" style="background-image: url(images/1.png)">
+        </a>
+        <a class="product-image-small" ng-click="picId = 3" ng-class="{'is-active': picId == 3}" style="background-image: url(images/2.png)">
+        </a>
+      </div>
     </div>
-    <div ng-if = "productId ==2">
-    <img src="./images/VitaminE.jpg" alt = "Vitamin E" >
+    <div ng-if="productId==2" ng-init="picId = 1">
+      <div class="product-image" ng-if="picId == 1" style="background-image: url(images/VitaminE.jpg)">
+      </div>
+      <div class="product-image" ng-if="picId == 2" style="background-image: url(images/1.png)">
+      </div>
+      <div class="product-image" ng-if="picId == 3" style="background-image: url(images/2.png)">
+      </div>
+      <br>
+      <div>
+        <a class="product-image-small" ng-click="picId = 1" ng-class="{'is-active': picId == 1}" style="background-image: url(images/VitaminE.jpg)">
+        </a>
+        <a class="product-image-small" ng-click="picId = 2" ng-class="{'is-active': picId == 2}" style="background-image: url(images/1.png)">
+        </a>
+        <a class="product-image-small" ng-click="picId = 3" ng-class="{'is-active': picId == 3}" style="background-image: url(images/2.png)">
+        </a>
+      </div>
     </div>
   </div>
   <div class="column" >
@@ -97,12 +125,6 @@
       <a ng-click="activeTab = 'Directions'">
         <span class="icon is-small"><i class="fa fa-user-md"></i></span>
         <span>Directions</span>
-      </a>
-    </li>
-    <li ng-class="{'is-active': activeTab === 'Images'}">
-      <a ng-click="activeTab = 'Images'">
-        <span class="icon is-small"><i class="fa fa-image"></i></span>
-        <span>Images</span>
       </a>
     </li>
     <li ng-class="{'is-active': activeTab === 'Safety'}">
@@ -603,30 +625,6 @@
     Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
 
   </div>
-  <div class = "message-body" ng-show="activeTab == 'Images'"> 
-
-
-    <div class = "columns" style="justify-content: center"  ng-if = "productId!=2">
-      <div class = "column is-narrow" style="width: 20%;">
-       <img src="./images/1.png" alt = "Vitamin B6" style="width: 100%"></div>
-       <div class = "column is-narrow" style="width: 20%;">
-         <img src="./images/2.png" alt="Vitamin B6" style="width: 100%"></div>
-
-         <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
-         <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
-       </div>
-
-    <div class = "columns" style="justify-content: center"  ng-if = "productId==2">
-      <div class = "column is-narrow" style="width: 20%;">
-       <img src="./images/VE back.jpg" alt = "Vitamin E" style="width: 100%"></div>
-       <div class = "column is-narrow" style="width: 20%;">
-         <img src="./images/ve back2.jpg" alt="Vitamin E" style="width: 100%"></div>
-
-         <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
-         <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
-       </div>
-
-     </div>
 
     <div class = "message-body" ng-show="activeTab == 'Safety'">
     <div ng-if="productId!=2">
