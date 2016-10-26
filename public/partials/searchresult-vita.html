@@ -58,14 +58,19 @@
         </label>
       </div>
       <div class="panel-block is-active" >
-      <div class="control is-grouped">
-        <div class="contorl is-expanded">
-           <input class="input" type="text" placeholder="$ min">
-        </div>to
-        <div class="contorl is-expanded">
-           <input class="input" type="text" placeholder="$ max">
+
+        <div class="columns">
+          <div class="column">
+             <input class="input" type="text" placeholder="$ min" style="float: left">
+          </div>
+          <div class="column is-narrow" style="align-self: center; padding-left: 0; padding-right: 0;">
+            to
+          </div>
+          <div class="column">
+             <input class="input" type="text" placeholder="$ max" style="float: right">
+          </div>
         </div>
-      </div>
+
       </div>
       <div class="panel-block">
         <button class="button is-primary is-outlined is-fullwidth" ui-sref="underConstruction">
