@@ -2,7 +2,7 @@
   <button class="delete"></button>
   Did you mean <b><a ui-sref="searchResult({term: vm.keyword})">{{vm.keyword}}</a></b>?
 </div>
-<span class="title is-primary">Search Results for <strong>"{{vm.term}}"</strong></span>
+<span class="title is-primary">Search Results for<strong>"{{vm.term}}"</strong></span>
 <br>
 <br>
 <br>
@@ -110,11 +110,6 @@
     </nav>
   </div>
   <div class="column is-10">
-    <div class="notification is-primary">
-      <span class="title is-2">Featured Products</span>
-    </div>
-    <br>
-    <br>
     <div ng-init="itemCount=34;" ng-include="'partials/product-header.html'"></div>
     <div ng-include="'partials/product-list.html'" style="margin-top: 20px;"></div>
     <nav class="pagination" style="margin-top: 20px;">
