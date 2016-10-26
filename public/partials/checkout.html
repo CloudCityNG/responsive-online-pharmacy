@@ -779,10 +779,10 @@
 													<p>Nature Made Vitamin B6 Tablets
 												</div>
 												<div class="column">
-													 <span class="help ">(Quantity : 1)</span>
+													 <span class="help ">(Quantity : {{master.cart[1]}})</span>
 												</div>
 												<div class="column">
-													<p>$10.25 </p>
+													<p>{{master.cart[1]*5.15 | currency}}</p>
 												</div>
 											</div>
 												<div class="columns">
@@ -790,10 +790,10 @@
 													<p>Nature Made Vitamin E Tablets
 												</div>
 												<div class="column">
-													 <span class="help ">(Quantity : 1)</span>
+													 <span class="help ">(Quantity : {{master.cart[2]}})</span>
 												</div>
 												<div class="column">
-													<p> $17.99 </p>
+													<p>{{master.cart[2]*8.99 | currency}}</p>
 												</div>
 											</div>
 
@@ -817,7 +817,7 @@
 												 <span class="help"></span>
 											</div>
 											<div class="column">
-												<p><b> $33.24 </b></p>
+												<p><b>{{master.totalPrice + 5 | currency}}</b></p>
 											</div>
 										</div>
 											<p class="control">
