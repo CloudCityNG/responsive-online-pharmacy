@@ -127,12 +127,6 @@
         <span>Directions</span>
       </a>
     </li>
-    <li ng-class="{'is-active': activeTab === 'Images'}">
-      <a ng-click="activeTab = 'Images'">
-        <span class="icon is-small"><i class="fa fa-image"></i></span>
-        <span>Images</span>
-      </a>
-    </li>
     <li ng-class="{'is-active': activeTab === 'Safety'}">
       <a ng-click="activeTab = 'Safety'">
         <span class="icon is-small"><i class="fa fa-hospital-o"></i></span>
@@ -631,30 +625,6 @@
     Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
 
   </div>
-  <div class = "message-body" ng-show="activeTab == 'Images'"> 
-
-
-    <div class = "columns" style="justify-content: center"  ng-if = "productId!=2">
-      <div class = "column is-narrow" style="width: 20%;">
-       <img src="./images/1.png" alt = "Vitamin B6" style="width: 100%"></div>
-       <div class = "column is-narrow" style="width: 20%;">
-         <img src="./images/2.png" alt="Vitamin B6" style="width: 100%"></div>
-
-         <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
-         <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
-       </div>
-
-    <div class = "columns" style="justify-content: center"  ng-if = "productId==2">
-      <div class = "column is-narrow" style="width: 20%;">
-       <img src="./images/VE back.jpg" alt = "Vitamin E" style="width: 100%"></div>
-       <div class = "column is-narrow" style="width: 20%;">
-         <img src="./images/ve back2.jpg" alt="Vitamin E" style="width: 100%"></div>
-
-         <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
-         <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
-       </div>
-
-     </div>
 
     <div class = "message-body" ng-show="activeTab == 'Safety'">
     <div ng-if="productId!=2">
