@@ -1,6 +1,6 @@
 <h1 class="title" ng-if="productId != 2">Nature Made vitamin B6 100mg </h1>
 <h1 class="title" ng-if="productId == 2">Nature Made vitamin E 400 I.U. </h1>
-<p class="subtitle">Detailed infomation of medicine is provided blow.</p>
+<p class="subtitle">Detailed information of medicine is provided in this page.</p>
 
 
 
@@ -15,9 +15,12 @@
   </div>
   <div class="column" >
     <span ng-if ="productId != 2">
-    <h1> <STRONG> <font size="6">$10.25</font></STRONG></h1></span>
+
+    <h1 class="pdtl-productPrice-old"><strike><font size="5">$10.25</font></strike>  <span class="pdtl-productPrice"><font size="6">$5.15</font></span></h1></span>
+   
     <span ng-if ="productId == 2">
-    <h1> <STRONG> <font size="6">$17.99</font></STRONG></h1></span>
+    <h1 class="pdtl-productPrice-old"><strike><font size="5">$17.99</font></strike>  <span class="pdtl-productPrice"><font size="6">$8.99</font></span></h1></span>
+
     <span class="icon is-primary"><i class="fa fa-star"></i></span>
     <span class="icon"><i class="fa fa-star"></i></span>
     <span class="icon"><i class="fa fa-star"></i></span>
@@ -27,7 +30,7 @@
 
 
     <div class="notification is-primary has-text-center">
-      <span class="title is-2"><strong>BUY ONE GET ONE!</strong></span>
+      <span class="title is-2"><strong>50% OFF!</strong></span>
       <br>
       <span class="subtitle is-7">*On Select Nature Made vitamins.</span>
     </div>
@@ -58,27 +61,13 @@
     <div class="message-body">
      <label class="panel-block">
       <input type="radio" name="shipping" checked>
-      <STRONG>Ship One Time</STRONG>  &nbsp  &nbsp &nbsp &nbsp  arrive in two business days
+      <STRONG>Regular Delivery</STRONG>  <div style="float: right;">arrive in five business days</div>
     </label>
-
+     <label class="panel-block">
+      <input type="radio" name="shipping" checked>
+      <STRONG>Urgent Delivery</STRONG>  &nbsp  &nbsp &nbsp &nbsp $5.00 <div style="float: right;">arrive in two business days</div>
+    </label>
   </div>
-
-  <div class="message-header">
-    <font size = "3" >Schedule a recurring delivery</font> 
-      <div style = "float: right;">
-       <a ui-sref="underConstruction" style="color: #ffffff"> Learn More >></a>
-      </div>
-    
-  </div>
-  <div class="message-body">
-   <label class="panel-block">
-    <input type="radio" name="shipping">
-    <STRONG>Ship every 1 or 6 months</STRONG>  &nbsp  &nbsp &nbsp &nbsp  You can SAVE 20% with Ship & Save!
-  </label>
-
-</div>
-
-
 </article>
 
 </div>      
@@ -177,7 +166,7 @@
         Pages 1 of 10
       </span>
       <span style = "float: right;">
-        <a class="button is-danger is-active">Write a review</a>
+        <a class="button is-danger is-active" ui-sref="underConstruction" >Write a review</a>
       </span>
       <br>
       <br>
@@ -204,9 +193,7 @@
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
               </span>
               <br>
-
               I can never find in store and so happy to find it on line, great price, quick delivery. Very convenient! I love Nature made brands. If you go on their website you can get points and get $$$ of future vitamins.
-
             </p>
           </div>
         </div>
@@ -617,7 +604,9 @@
 
   </div>
   <div class = "message-body" ng-show="activeTab == 'Images'"> 
-    <div class = "columns" style="justify-content: center">
+
+
+    <div class = "columns" style="justify-content: center"  ng-if = "productId!=2">
       <div class = "column is-narrow" style="width: 20%;">
        <img src="./images/1.png" alt = "Vitamin B6" style="width: 100%"></div>
        <div class = "column is-narrow" style="width: 20%;">
@@ -626,6 +615,17 @@
          <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
          <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
        </div>
+
+    <div class = "columns" style="justify-content: center"  ng-if = "productId==2">
+      <div class = "column is-narrow" style="width: 20%;">
+       <img src="./images/VE back.jpg" alt = "Vitamin E" style="width: 100%"></div>
+       <div class = "column is-narrow" style="width: 20%;">
+         <img src="./images/ve back2.jpg" alt="Vitamin E" style="width: 100%"></div>
+
+         <!--<img src="./images/2.png" alt = "Vitamin B6"> -->
+         <!--<img src="./images/3.png" alt = "Vitamin B6"> -->
+       </div>
+
      </div>
 
     <div class = "message-body" ng-show="activeTab == 'Safety'">
