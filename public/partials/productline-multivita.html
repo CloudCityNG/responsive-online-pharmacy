@@ -1,6 +1,7 @@
 <a class="title is-5 is-primary" ui-sref="home">Home</a>
 <a class="title is-5 is-primary" ui-sref="productLineNutri">Nutrition</a>
-<span class="title is-primary">Vitamins</span>
+<a class="title is-5 is-primary" ui-sref="productLineVita">Vitamins</a>
+<span class="title is-primary">Multivitamins</span>
 <br>
 <br>
 <br>
@@ -10,9 +11,9 @@
       <p class="menu-label">Subcategories</p>
       <ul class="menu-list">
         <li>
-          <a ui-sref-active="is-active" ui-sref="productLineVita">Vitamins</a>
+          <a ui-sref="productLineVita">Vitamins</a>
           <ul>
-              <li><a ui-sref="productLineMultivita">Multivitamins</a></li>
+              <li><a ui-sref-active="is-active" ui-sref="productLineMultivita">Multivitamins</a></li>
               <li><a ui-sref="underConstruction">Vitamin A-Z & Minerals</a></li>
               <li><a ui-sref="underConstruction">Gummies</a></li>
               <li><a ui-sref="underConstruction">Specialty Vitamins</a></li>
@@ -40,7 +41,7 @@
     </div>
     <br>
     <br>
-    <div ng-init="itemCount=34;" ng-include="'partials/product-header.html'"></div>
+    <div ng-init="itemCount=10;" ng-include="'partials/product-header.html'"></div>
     <div ng-include="'partials/product-list.html'" style="margin-top: 20px;"></div>
     <nav class="pagination" style="margin-top: 20px;">
       <a class="button is-disabled">Previous</a>
@@ -51,12 +52,6 @@
         </li>
         <li>
           <a class="button" ui-sref="underConstruction">2</a>
-        </li>
-        <li>
-          <a class="button" ui-sref="underConstruction">3</a>
-        </li>
-        <li>
-          <a class="button" ui-sref="underConstruction">4</a>
         </li>
       </ul>
     </nav>

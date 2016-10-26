@@ -21,14 +21,22 @@ angular.module('succotash').config(function($stateProvider, $urlRouterProvider) 
       templateUrl: 'partials/productline-vita.html',
     })
     .state({
+      name: 'productLineMultivita',
+      url: '/productline-multivita',
+      templateUrl: 'partials/productline-multivita.html',
+    })
+    .state({
       name: 'productDetail',
-      url: '/products/:id',
+      url: '/products/:id/:ma',
       params: {
         id: {value: '1'},
       },
       templateUrl: 'partials/product-detail.html',
-      controller: function($scope, $stateParams) {
+      controller: function($scope, $stateParams,$location,$anchorScroll) {
         $scope.productId = parseInt($stateParams.id) || 1;
+        $scope.activeTab = $stateParams.ma || 'Details';
+        if ($stateParams.ma == 'Reviews') $location.hash('panelTabs');
+        $anchorScroll();
       },
     })
     .state({

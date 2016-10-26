@@ -9,9 +9,9 @@
             </a>
           </div>
           <div class="column is-7">
-            <p class="pdtl-productPrice">$10.25</p>
+            <p class="pdtl-productPrice-old"><strike>$10.25</strike>  <span class="pdtl-productPrice">$5.15</span></p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -22,14 +22,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">Nature Made Vitamin B6 Tablets</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-half-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -41,9 +41,9 @@
             </a>
           </div>
           <div class="column is-7">
-            <p class="pdtl-productPrice">$17.99</p>
+            <p class="pdtl-productPrice-old"><strike>$17.99</strike>  <span class="pdtl-productPrice">$8.99</span></p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 2})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -54,14 +54,14 @@
         <a class="pdtl-productName" ui-sref="productDetail({id: 2})">Nature Made Vitamin E Tablets</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({id: 2,ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -73,9 +73,9 @@
             </a>
           </div>
           <div class="column is-7">
-            <p class="pdtl-productPrice">$24.99</p>
+            <p class="pdtl-productPrice-old"><strike>$24.99</strike>  <span class="pdtl-productPrice">$12.49</span></p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -86,17 +86,18 @@
         <a class="pdtl-productName" ui-sref="productDetail">American Health More Than A Multiple Multivatimin Formula Tablets, 90CT</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
   </div>
+  <hr style="background-color: #771b61">
   <div class="tile is-ancestor">
     <div class="tile is-4 is-parent is-vertical">
       <div class="tile is-child">
@@ -109,7 +110,7 @@
           <div class="column is-7">
             <p class="pdtl-productPrice">$35.79</p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -120,14 +121,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">22 Days Organic Chocolate Chip Nutrition Protein Bars 2.6 OZ, 12CT</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -141,7 +142,7 @@
           <div class="column is-7">
             <p class="pdtl-productPrice">$7.99</p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -152,14 +153,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">EAS AdvantEdge Carb Control Ready to Drink Shakes 11 OZ, 4CT</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -173,7 +174,7 @@
           <div class="column is-7">
             <p class="pdtl-productPrice">$8.99</p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -184,17 +185,18 @@
         <a class="pdtl-productName" ui-sref="productDetail">5-Hour Energy</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
   </div>
+  <hr style="background-color: #771b61">
   <div class="tile is-ancestor">
     <div class="tile is-4 is-parent is-vertical">
       <div class="tile is-child">
@@ -205,9 +207,9 @@
             </a>
           </div>
           <div class="column is-7">
-            <p class="pdtl-productPrice">$9.99</p>
+            <p class="pdtl-productPrice-old"><strike>$9.99</strike>  <span class="pdtl-productPrice">$4.99</span></p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -218,14 +220,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">Centrum Silver Multivitamin Personalized for Men 50+</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -237,9 +239,9 @@
             </a>
           </div>
           <div class="column is-7">
-            <p class="pdtl-productPrice">$13.49</p>
+            <p class="pdtl-productPrice-old"><strike>$13.49</strike>  <span class="pdtl-productPrice">$6.75</span></p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -250,14 +252,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">Vitafusion Platinum Multivitamin Gummy Vitamins 50+</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
     <div class="tile is-4 is-parent is-vertical">
@@ -271,7 +273,7 @@
           <div class="column is-7">
             <p class="pdtl-productPrice">$12.99</p>
             <br>
-            <a class="button is-small is-info" ui-sref="cartSummary">
+            <a class="button is-small is-primary" ng-click="master.addToCart({productId: 1})">
               <span><strong style="font-size: 13px">+ Add to Cart</strong></span>
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
@@ -282,14 +284,14 @@
         <a class="pdtl-productName" ui-sref="productDetail">Pure Protein Shake 11 OZ, 4CT</a>
       </div>
       <div class="tile is-9 is-child">
-        <p class="pdtl-productReview">
+        <a class="pdtl-productReview" ui-sref="productDetail({ma: 'Reviews'})">
           Review:
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star"></i></span>
           <span class="icon"><i class="fa fa-star-o"></i></span>
-        </p>
+        </a>
       </div>
     </div>
   </div>
