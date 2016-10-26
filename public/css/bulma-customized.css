@@ -611,7 +611,7 @@ a.box:active {
         border-color: #771b61;
         color: white; }
   .button.is-info {
-    background-color: #00466b;
+    background-color: #771b61;
     border-width: 0;
     color: white; }
     .button.is-info:hover, .button.is-info:focus, .button.is-info.is-active {
