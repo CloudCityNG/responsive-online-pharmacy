@@ -62,3 +62,14 @@
 .product-image-small.is-active {
   border: solid 1px #771b61;
 }
+
+.product-tabs ~ .message-body {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.product-content-narrow {
+  max-width: 50em;
+  margin: 0 auto;
+}

@@ -101,7 +101,7 @@
 </div>
 </div>
 
-<div class="tabs is-centered is-boxed" style="margin: 0;" id="panelTabs">
+<div class="tabs is-centered is-boxed product-tabs" style="margin: 0;" id="panelTabs">
   <ul>
     <li ng-class="{'is-active': activeTab === 'Details'}">
       <a ng-click="activeTab = 'Details'">
@@ -137,7 +137,7 @@
 </div>
 <div class = "message-body" ng-show="activeTab == 'Details'">
 
-  <div class = "content" ng-if="productId!=2">
+  <div class = "content product-content-narrow" ng-if="productId!=2">
     <p>
       Along with other B vitamins, vitamin B6, also called pyridoxine, supports cellular energy production. Vitamin B6 is also essential in the formation of red blood cells, which play a key role in transporting oxygen throughout the body. A vitamin B6 supplement may help you meet your daily B6 needs.</p>
 
@@ -158,7 +158,7 @@
       </ul>
     </div>
 
-    <div class = "content" ng-if="productId==2">
+    <div class = "content product-content-narrow" ng-if="productId==2">
       <p>Vitamin E is a fat-soluble vitamin, which functions as an antioxidant.</p>
       <ul>
         <li>Essential nutrient for many cells, including heart muscle cells</li></ul>
@@ -622,16 +622,23 @@
 
 
   <div class = "message-body" ng-show="activeTab == 'Directions'">
-    Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
+    <div class="content product-content-narrow">
+      Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
+    </div>
 
   </div>
 
     <div class = "message-body" ng-show="activeTab == 'Safety'">
     <div ng-if="productId!=2">
-      Vitamin B6 should be avoided when taking: Consult a physician before use if you are taking any prescription medications, including anticonvulsants. Vitamin B6 should be used with caution when combined with: Anticonvulsant medications (i.e. phenobarbital, phenytoin). Given that no two people are alike, if you are taking any medications you should be aware that potential drug-nutrient interactions may occur and are encouraged to consult a health care professional before using this product. Combining certain prescription drugs and dietary supplements can lead to undesirable effects such as: Diminished drug effectiveness, reduced supplement effectiveness, impaired drug and/or supplement absorption.
+      <div class="content product-content-narrow">
+        <p>Vitamin B6 should be avoided when taking: Consult a physician before use if you are taking any prescription medications, including anticonvulsants. Vitamin B6 should be used with caution when combined with: Anticonvulsant medications (i.e. phenobarbital, phenytoin).</p>
+        <p>Given that no two people are alike, if you are taking any medications you should be aware that potential drug-nutrient interactions may occur and are encouraged to consult a health care professional before using this product. Combining certain prescription drugs and dietary supplements can lead to undesirable effects such as: Diminished drug effectiveness, reduced supplement effectiveness, impaired drug and/or supplement absorption.</p>
+      </div>
       </div>
 
       <div ng-if="productId==2">
-        consult a doctor if you have a medical condition prior to use, consult a doctor if you have diabetes
+        <div class="content product-content-narrow">
+          Consult a doctor if you have a medical condition prior to use. Consult a doctor if you have diabetes.
+        </div>
       </div>
     </div>
