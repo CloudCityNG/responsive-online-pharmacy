@@ -5,7 +5,7 @@
 
 
 <div class="columns">
-  <div class="column">    
+  <div class="column">
     <div ng-if="productId!=2" ng-init="picId = 1">
       <div class="product-image" ng-if="picId == 1" style="background-image: url(images/VitaminB6.jpg)">
       </div>
@@ -45,7 +45,7 @@
     <span ng-if ="productId != 2">
 
     <h1 class="pdtl-productPrice-old"><strike><font size="5">$10.25</font></strike>  <span class="pdtl-productPrice"><font size="6">$5.15</font></span></h1></span>
-   
+
     <span ng-if ="productId == 2">
     <h1 class="pdtl-productPrice-old"><strike><font size="5">$17.99</font></strike>  <span class="pdtl-productPrice"><font size="6">$8.99</font></span></h1></span>
 
@@ -80,8 +80,8 @@
 
    <article class="message">
     <div class="message-header">
-     
-      <font size = "3" >Ship information </font> 
+
+      <font size = "3" >Ship information </font>
       <div style = "float: right;">
      <a ui-sref="underConstruction" style="color: #ffffff"> Check Stock Details >></a>
       </div>
@@ -89,19 +89,19 @@
     <div class="message-body">
      <label class="panel-block">
       <input type="radio" name="shipping" checked>
-      <STRONG>Standard Delivery</STRONG>  <div style="float: right;">Arrive in five business days.</div>
+      <STRONG>Standard Delivery</STRONG>  <div style="float: right;">Arrives in five business days.</div>
     </label>
      <label class="panel-block">
       <input type="radio" name="shipping" checked>
-      <STRONG>Express Delivery</STRONG>  &nbsp  &nbsp &nbsp &nbsp $5.00 <div style="float: right;">Arrive in two business days.</div>
+      <STRONG>Express Delivery</STRONG>  &nbsp  &nbsp &nbsp &nbsp $5.00 <div style="float: right;">Arrives in two business days.</div>
     </label>
   </div>
 </article>
 
-</div>      
+</div>
 </div>
 
-<div class="tabs is-centered is-boxed" style="margin: 0;" id="panelTabs">
+<div class="tabs is-centered is-boxed product-tabs" style="margin: 0;" id="panelTabs">
   <ul>
     <li ng-class="{'is-active': activeTab === 'Details'}">
       <a ng-click="activeTab = 'Details'">
@@ -112,7 +112,7 @@
     <li ng-class="{'is-active': activeTab === 'Reviews'}">
       <a ng-click="activeTab = 'Reviews'">
         <span class="icon is-small"><i class="fa fa-comment"></i></span>
-        <span>Reviews</span>   
+        <span>Reviews</span>
       </a>
     </li>
     <li ng-class="{'is-active': activeTab === 'Ingredients'}">
@@ -137,7 +137,7 @@
 </div>
 <div class = "message-body" ng-show="activeTab == 'Details'">
 
-  <div class = "content" ng-if="productId!=2">
+  <div class = "content product-content-narrow" ng-if="productId!=2">
     <p>
       Along with other B vitamins, vitamin B6, also called pyridoxine, supports cellular energy production. Vitamin B6 is also essential in the formation of red blood cells, which play a key role in transporting oxygen throughout the body. A vitamin B6 supplement may help you meet your daily B6 needs.</p>
 
@@ -154,11 +154,11 @@
         <li>No color added</li>
         <li>No preservatives</li>
         <li>No yeast or starch</li>
-        <li>Gluten-free</li> 
+        <li>Gluten-free</li>
       </ul>
     </div>
 
-    <div class = "content" ng-if="productId==2">
+    <div class = "content product-content-narrow" ng-if="productId==2">
       <p>Vitamin E is a fat-soluble vitamin, which functions as an antioxidant.</p>
       <ul>
         <li>Essential nutrient for many cells, including heart muscle cells</li></ul>
@@ -174,11 +174,11 @@
           <li>No yeast or starch</li>
           <li>Gluten-free</li>
           </ul>
-        </div>  
+        </div>
 </div>
 
 
-  <div class = "message-body" ng-show="activeTab == 'Reviews'"> 
+  <div class = "message-body" ng-show="activeTab == 'Reviews'">
     <p style = "text-align: center;">
 
       <span style="float: left;">
@@ -205,10 +205,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Ostrong9</strong> <small>21 days ago</small> &nbsp &nbsp 
-              <strong>Has What We Need!</strong>  
+              <strong>Ostrong9</strong> <small>21 days ago</small> &nbsp &nbsp
+              <strong>Has What We Need!</strong>
               <span style="float: right">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -217,6 +217,9 @@
               <br>
               I can never find in store and so happy to find it on line, great price, quick delivery. Very convenient! I love Nature made brands. If you go on their website you can get points and get $$$ of future vitamins.
             </p>
+          </div>
+          <div class="product-comment-useful">
+            <b>29</b> people have found this comment useful.
           </div>
         </div>
       </article>
@@ -232,10 +235,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Johnsmith</strong> <small>3 months ago</small> &nbsp &nbsp 
-              <strong>Recommended By Nutrition Action Newsletter</strong>  
+              <strong>Johnsmith</strong> <small>3 months ago</small> &nbsp &nbsp
+              <strong>Recommended By Nutrition Action Newsletter</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -246,34 +249,8 @@
               This multi-vitamin was recommended by the Nutrition Action Newsletter. It contains just the right amount of what is needed and not excessive amounts. It is a good insurance policy that I am getting what I need.
             </p>
           </div>
-        </div>
-      </article>
-    </div>
-
-
-
-    <div class="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-64x64">
-            <img src="http://placehold.it/128x128" alt="Image">
-          </figure>
-        </div>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>Kimmichele</strong> <small>4 months ago</small> &nbsp &nbsp 
-              <strong>Convenience!</strong>
-              <span style="float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
-                <span class="icon is-small"><i class="fa fa-star"></i></span>
-                <span class="icon is-small"><i class="fa fa-star"></i></span>
-                <span class="icon is-small"><i class="fa fa-star"></i></span>
-                <span class="icon is-small"><i class="fa fa-star"></i></span>
-              </span>
-              <br>
-              I enjoy the convenience of receiving my vitamins in the mail especially because I have had problems finding them in the stock in the store.
-            </p>
+          <div class="product-comment-useful">
+            <b>14</b> people have found this comment useful.
           </div>
         </div>
       </article>
@@ -291,10 +268,42 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>JVP4444</strong> <small>4 months ago</small> &nbsp &nbsp 
-              <strong>This Product Helps Keep Me Healthy.</strong>  
+              <strong>Kimmichele</strong> <small>4 months ago</small> &nbsp &nbsp
+              <strong>Convenience!</strong>
+              <span style="float: right;">
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
+              </span>
+              <br>
+              I enjoy the convenience of receiving my vitamins in the mail especially because I have had problems finding them in the stock in the store.
+            </p>
+          </div>
+          <div class="product-comment-useful">
+            <b>7</b> people have found this comment useful.
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="http://placehold.it/128x128" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>JVP4444</strong> <small>4 months ago</small> &nbsp &nbsp
+              <strong>This Product Helps Keep Me Healthy.</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -320,10 +329,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Audrey927</strong> <small>6 months ago</small> &nbsp &nbsp 
-              <strong>Very Easy To Digest And A Good Product For The Money.</strong>  
+              <strong>Audrey927</strong> <small>6 months ago</small> &nbsp &nbsp
+              <strong>Very Easy To Digest And A Good Product For The Money.</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -340,7 +349,7 @@
     </div>
 
     <div ng-if = "productId==2">
-      
+
 
           <div class="box">
       <article class="media">
@@ -352,10 +361,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Vince9</strong> <small>2 days ago</small> &nbsp &nbsp 
-              <strong>Nature Made Vitamin E 400IU - 300 Softgels</strong>  
+              <strong>Vince9</strong> <small>2 days ago</small> &nbsp &nbsp
+              <strong>Nature Made Vitamin E 400IU - 300 Softgels</strong>
               <span style="float: right">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -363,9 +372,12 @@
               </span>
               <br>
 
-             Nature Made is my personal choice. I buy with confidence and have never been disappointed with the product. I prefer the softgel variety because it is easier to swallow. Nature Made vitamins always have an excellent shelve expiration date and pricing compared to other products. 
+             Nature Made is my personal choice. I buy with confidence and have never been disappointed with the product. I prefer the softgel variety because it is easier to swallow. Nature Made vitamins always have an excellent shelve expiration date and pricing compared to other products.
 
             </p>
+          </div>
+          <div class="product-comment-useful">
+            <b>89</b> people have found this comment useful.
           </div>
         </div>
       </article>
@@ -381,10 +393,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Teng09</strong> <small>3 months ago</small> &nbsp &nbsp 
-              <strong>Use natural source vitamin E, look for d-alpha!</strong>  
+              <strong>Teng09</strong> <small>3 months ago</small> &nbsp &nbsp
+              <strong>Use natural source vitamin E, look for d-alpha!</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -392,8 +404,11 @@
               </span>
               <br>
 
-              Nature Made is the absolute best brand out there. But use vitamin E made from plants (d-alpha or natural source), not vitamin E made from petroleum (dl-alpha or synthetic). It takes twice as much dl-alpha to equal that of d-alpha! If you can't find d-alpha Nature Made, call 1-800-276-2878 and they will assist you.  
+              Nature Made is the absolute best brand out there. But use vitamin E made from plants (d-alpha or natural source), not vitamin E made from petroleum (dl-alpha or synthetic). It takes twice as much dl-alpha to equal that of d-alpha! If you can't find d-alpha Nature Made, call 1-800-276-2878 and they will assist you.
             </p>
+          </div>
+          <div class="product-comment-useful">
+            <b>5</b> people have found this comment useful.
           </div>
         </div>
       </article>
@@ -411,19 +426,22 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Champloo</strong> <small>4 months ago</small> &nbsp &nbsp 
+              <strong>Champloo</strong> <small>4 months ago</small> &nbsp &nbsp
               <strong>Cheap Price! </strong>
               <span style="float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
               </span>
               <br>
-              
-              Purchased for my mom. Good Vitamin E. Cheaper price. 
+
+              Purchased for my mom. Good Vitamin E. Cheaper price.
             </p>
+          </div>
+          <div class="product-comment-useful">
+            <b>1</b> person has found this comment useful.
           </div>
         </div>
       </article>
@@ -441,10 +459,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Raina05</strong> <small>4 months ago</small> &nbsp &nbsp 
-              <strong>This product has great features.</strong>  
+              <strong>Raina05</strong> <small>4 months ago</small> &nbsp &nbsp
+              <strong>This product has great features.</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -452,7 +470,7 @@
               </span>
               <br>
 
-              I have been taking Nature Made Vitamin E for a long time and have been very satisfied with the product. Unfortunately, recently I have had to switch brands because I can not find the NatureMade vitamin E with d-Alpha Tocopherol and mixed Tocopherols. Just the kind that has Tocophyrols. I would still be buying NatureMade vitamin E if my store carried it.  
+              I have been taking Nature Made Vitamin E for a long time and have been very satisfied with the product. Unfortunately, recently I have had to switch brands because I can not find the NatureMade vitamin E with d-Alpha Tocopherol and mixed Tocopherols. Just the kind that has Tocophyrols. I would still be buying NatureMade vitamin E if my store carried it.
             </p>
           </div>
         </div>
@@ -470,10 +488,10 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>SSR</strong> <small>6 months ago</small> &nbsp &nbsp 
-              <strong>Vitamin E capsules</strong>  
+              <strong>SSR</strong> <small>6 months ago</small> &nbsp &nbsp
+              <strong>Vitamin E capsules</strong>
               <span style= "float: right;">
-                <span class="icon is-small"><i class="fa fa-star"></i></span>  
+                <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
                 <span class="icon is-small"><i class="fa fa-star"></i></span>
@@ -481,7 +499,7 @@
               </span>
               <br>
 
-              These are very easy to swallow and I believe they are good for your skin and eyes. They leave no bad aftertaste either. 
+              These are very easy to swallow and I believe they are good for your skin and eyes. They leave no bad aftertaste either.
             </p>
           </div>
         </div>
@@ -494,7 +512,11 @@
 <br>
 
     <nav class="pagination">
+<<<<<<< HEAD
       <a class="button">Previous page</a>
+=======
+      <a class="button is-disabled">Previous page</a>
+>>>>>>> 63372dfced0b872e66f793ecf8be90e8fb7801b6
       <a class="button">Next page</a>
       <ul>
         <li>
@@ -522,7 +544,7 @@
     </nav>
   </div>
 
-  <div class = "message-body" ng-show="activeTab == 'Ingredients'"> 
+  <div class = "message-body" ng-show="activeTab == 'Ingredients'">
 
     <h1> <STRONG><font size= "5">Supplement Facts(per tablet)</font></STRONG></h1>
 
@@ -621,19 +643,24 @@
   </div>
 
 
-  <div class = "message-body" ng-show="activeTab == 'Directions'"> 
-    Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
+  <div class = "message-body" ng-show="activeTab == 'Directions'">
+    <div class="content product-content-narrow">
+      Take one tablet daily, with a meal. For easier swallowing, take with water before and during ingestion.
+    </div>
 
   </div>
 
     <div class = "message-body" ng-show="activeTab == 'Safety'">
     <div ng-if="productId!=2">
-      Vitamin B6 should be avoided when taking: Consult a physician before use if you are taking any prescription medications, including anticonvulsants. Vitamin B6 should be used with caution when combined with: Anticonvulsant medications (i.e. phenobarbital, phenytoin). Given that no two people are alike, if you are taking any medications you should be aware that potential drug-nutrient interactions may occur and are encouraged to consult a health care professional before using this product. Combining certain prescription drugs and dietary supplements can lead to undesirable effects such as: Diminished drug effectiveness, reduced supplement effectiveness, impaired drug and/or supplement absorption.
+      <div class="content product-content-narrow">
+        <p>Vitamin B6 should be avoided when taking: Consult a physician before use if you are taking any prescription medications, including anticonvulsants. Vitamin B6 should be used with caution when combined with: Anticonvulsant medications (i.e. phenobarbital, phenytoin).</p>
+        <p>Given that no two people are alike, if you are taking any medications you should be aware that potential drug-nutrient interactions may occur and are encouraged to consult a health care professional before using this product. Combining certain prescription drugs and dietary supplements can lead to undesirable effects such as: Diminished drug effectiveness, reduced supplement effectiveness, impaired drug and/or supplement absorption.</p>
+      </div>
       </div>
 
       <div ng-if="productId==2">
-        consult a doctor if you have a medical condition prior to use, consult a doctor if you have diabetes
+        <div class="content product-content-narrow">
+          Consult a doctor if you have a medical condition prior to use. Consult a doctor if you have diabetes.
+        </div>
       </div>
     </div>
-
-
