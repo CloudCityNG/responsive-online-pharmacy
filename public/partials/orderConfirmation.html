@@ -4,62 +4,66 @@
     <br>
     <br>
   </div>
-	<div class="panel panel-info">
-		<div class="panel-heading">
-      <nav class="panel-heading">
-        <div style="margin-left : centre">
-          <img style="float:left" class="image is-32x32" src="images/OrderConfirmation.png">
+  <div class="card is-fullwidth" style="margin-bottom: 5px">
+    <div class="card-header">
+      <p class="card-header-title" style="align-items: center;">
+        <img style="float:left; width: 25px; margin-right: 1em;" class="image" src="images/OrderConfirmation1.png">
+        <span class="title is-5">
           Thank you for your order, John Doe.
-        </div>
-      </nav>
+        </span>
+      </p>
+    </div>
+    <div class="card-content" style="font-size: 18px; font-weight: 300; line-height: inherit;">
+      <div style="width: 50%; margin:0 auto;">  Your order has been placed! <i class="fa fa-truck" aria-hidden="true"></i> </div>
+      <div style="width: 50%; margin:0 auto;"> <p>A confirmation email has been sent to johndoe@email.com</p></div>
+      <div style="width: 50%; margin:0 auto;"><p>Your order number is: <b><a ui-sref="underConstruction">100-0927177</a></b></p></div>
       <br>
-    <div style="width: 50%; margin:0 auto;">  Your order has been placed! <i class="fa fa-truck" aria-hidden="true"></i> </div>
-    <div style="width: 50%; margin:0 auto;"> <p>A confirmation email has been sent to johndoe@email.com</p></div>
-    <div style="width: 50%; margin:0 auto;"><p>Your order number is: <b><a ui-sref="underConstruction">100-0927177</a></b></p></div>
-    <br>
       <div style="width: 50%; margin:0 auto;">
-    <p><b><a ui-sref="underConstruction"><i class="fa fa-print" aria-hidden="true"></i> Print receipt</a></b></p>
+        <p><b><a ui-sref="underConstruction"><i class="fa fa-print" aria-hidden="true"></i> Print receipt</a></b></p>
       </div>
-    <br>
-    <p style="width: 50%; margin:0 auto;"> <strong>Order summary</strong></p>
+      <hr>
+      <p style="width: 50%; margin:0 auto;"> <strong>Order summary</strong></p>
 
-    <table class="table is-bordered is-narrow" style="width: 50%; margin:0 auto;">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Nature Made Vitamin B6 Tablets</td>
-        <td><p>{{master.cart[1]*5.15 | currency}}</p></td>
-      </tr>
-      <tr>
-        <td>Nature Made Vitamin E Tablets</td>
-        <td><p>{{master.cart[2]*8.99 | currency}}</p></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Shipping charges</td>
-        <td><p>$5.00</p></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <tr>
-          <td><b>Total</b></td>
-          <td><b><p>{{master.totalPrice + 5 | currency}}</b></p></td>
-        </tr>
-      </table>
+      <table class="table is-bordered is-narrow" style="width: 50%; margin:0 auto;">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nature Made Vitamin B6 Tablets</td>
+            <td><p>{{master.cart[1]*5.15 | currency}}</p></td>
+          </tr>
+          <tr>
+            <td>Nature Made Vitamin E Tablets</td>
+            <td><p>{{master.cart[2]*8.99 | currency}}</p></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Shipping charges</td>
+            <td><p>$5.00</p></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <tr>
+              <td><b>Total</b></td>
+              <td><b><p>{{master.totalPrice + 5 | currency}}</b></p></td>
+            </tr>
+          </table>
 
-        <button class="button is-primary" ui-sref="productLineNutri">Place another order</button>
+          <button class="button is-primary" ui-sref="productLineNutri">Place another order</button>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      </div>
-      </div>
-      </div>
