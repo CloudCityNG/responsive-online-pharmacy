@@ -40,3 +40,12 @@ $control-icon: $grey;
     color: $grey;
   }
 }
+
+.container {
+  @include desktop {
+    &.is-fluid {
+      margin: 0 30px;
+      max-width: none;
+    }
+  }
+}
